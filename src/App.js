@@ -19,7 +19,7 @@ function App() {
       <div className="header">
         <Header score={1} topScore={0}/>
       </div>
-      <div className='cards'>
+      <div className='cards-container'>
         <Cards />
       </div>
     </div>
