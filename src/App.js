@@ -16,9 +16,6 @@ import Cards from './components/Cards';
 function App() {
   return (
     <div>
-      <div className="header">
-        <Header score={1} topScore={0}/>
-      </div>
       <div className='cards-container'>
         <Cards />
       </div>

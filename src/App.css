@@ -1,23 +1,37 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
   grid-template-rows: 1fr;
-  gap: 20px;
+  gap: 15px;
   padding: 15px;
 }
 
 .card-img {
   display: flex;
   justify-content: center;
-
+  z-index: 1;
+  width: 400px;
+  height: 400px;
+  cursor: pointer;
 }
 
-.cards:hover {
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+} 
+
+.card-img:hover {
   border: 3px solid rgb(182, 77, 69);
   border-radius: 25px;
 }
 
 
 .card-img img {
-  height: 300px;
+  height: 100%;
+  width: 100%;
 }
