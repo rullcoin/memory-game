@@ -33,7 +33,7 @@ export default function Cards() {
 
     const [score, setScore] = useState(0)
 
-    const [highScore, setHighScore] = useState(0)
+    const [highScore, setHighScore] = useState(localStorage.getItem("highScore") != null ? localStorage.getItem("highScore") : 0)
 
   useEffect(() => {
 
@@ -52,6 +52,7 @@ export default function Cards() {
     const checkHighScore = () => {
         if(score > highScore) {
             setHighScore(score)
+            localStorage.setItem("highScore", JSON.stringify(score))
         }
     }
 
@@ -66,7 +67,6 @@ export default function Cards() {
             //higher than hScore
             
             checkHighScore()
-            console.log("game ends");
             resetScore()
             resetCurrentPicks()
         } else {
@@ -84,7 +84,9 @@ export default function Cards() {
       
       //Game logic func here.
       gameLogic(charId)
-      console.log(e.target);
+
+
+
     };
 
     const cardsDiv = document.querySelectorAll(".card-img");
